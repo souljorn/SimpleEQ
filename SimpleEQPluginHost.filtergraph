@@ -5,14 +5,14 @@
     <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="246006c0"
             isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
-            numOutputs="2" isShell="0" uid="246006c0"/>
+            numOutputs="10" isShell="0" uid="246006c0"/>
     <STATE>0.</STATE>
     <LAYOUT>
       <INPUTS>
         <BUS index="0" layout="disabled"/>
       </INPUTS>
       <OUTPUTS>
-        <BUS index="0" layout="C"/>
+        <BUS index="0" layout="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16"/>
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
@@ -34,12 +34,12 @@
   <FILTER uid="3" x="0.5" y="0.9">
     <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="724248cb"
-            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="1"
+            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="16"
             numOutputs="0" isShell="0" uid="724248cb"/>
     <STATE>0.</STATE>
     <LAYOUT>
       <INPUTS>
-        <BUS index="0" layout="L R"/>
+        <BUS index="0" layout="1 2 3 4 5 6 7 8 9 10"/>
       </INPUTS>
       <OUTPUTS>
         <BUS index="0" layout="disabled"/>
@@ -61,12 +61,13 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="5" x="0.47625" y="0.5442307692307692">
+  <FILTER uid="5" x="0.47625" y="0.5442307692307692" uiLastX_Normal="216"
+          uiLastY_Normal="163" uiopen_Normal="1">
     <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
             version="1.0.0" file="/Users/tbotelho/Library/Audio/Plug-Ins/VST3/SimpleEQ.vst3"
-            uniqueId="f1aedbe8" isInstrument="0" fileTime="17e679177f3" infoUpdateTime="17e67994097"
+            uniqueId="f1aedbe8" isInstrument="0" fileTime="17e679177f3" infoUpdateTime="17e6caf0b77"
             numInputs="2" numOutputs="2" isShell="0" uid="acf4e130"/>
-    <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
+    <STATE>623.VMjLgXl....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9LCNy3BTEwlXmAiUYoWUrIVdA4hKAIlKTETRUAUSAAkKBolQY4BQlMTQlQkVscVLPASTGgjQIcUV2EjYic1cVM1ZAAkKIAkKt3hKt3hKPgDbtDjKTETRUAUSAAkKBolQY4BQ1MTQlQkVscVLPASTGgzT2ESX1UkQtDSQFEFLUYjKAolKA4hKt3hKt3hKH4BQt.UQpQUPvPjKAgDTZoVPP4RST4xT0MlLPASTGgjQIcUV2EjYic1cVM1ZAAkKIAkKt3hKt3hKt3RStDjKTETRUAUSAAkKBolQY4BQlMTQ1oWXxzDUioWP3Qkb3XjXqEjYic1cVM1ZAAkKIAkKt3hKt3hKt3hKtDjKTETRUAUSAAkKBolQY4BQ1ITQtTUVmMmQHYTRWk0cAY1XmcmUisVPP4RRP4hKt3hKt3BTT4lKA4BUAkTUP0TPP4hPpYTVtPjcBUjKUk0YyYDRGUjUZQWPlM1Y2Y0XqEDTtjDTt3hKt3hKt3hKt3hKtPUPIUETMEDTtHjZFkkKDY1PE4RUYc1bFgTTUcEVxslQiQSPlM1Y2Y0XqEDTtjDTt3hKt3hYrkkUH4RPt3hKt3hKt3hKt3haTU0PUQDU3sFaicVTWkEQEYzXmEDTtDDRTQlcEEiX4EDTtDDSt3xXt3hKt3hKt3hKlIUUMQUTPkzUZESQFM1ZQQEV5UjQ77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
     <LAYOUT>
       <INPUTS>
         <BUS index="0" layout="L R"/>
@@ -76,13 +77,13 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="6" x="0.48375" y="0.2692307692307692" uiLastX_Normal="450"
-          uiLastY_Normal="205" uiopen_Normal="1">
+  <FILTER uid="6" x="0.48375" y="0.2692307692307692" uiLastX_Normal="440"
+          uiLastY_Normal="500" uiopen_Normal="1">
     <PLUGIN name="AUAudioFilePlayer" format="AudioUnit" category="Generator"
             manufacturer="Apple" version="1.6.0" file="AudioUnit:Generators/augn,afpl,appl"
-            uniqueId="6163676e" isInstrument="0" fileTime="0" infoUpdateTime="17e67994097"
+            uniqueId="6163676e" isInstrument="0" fileTime="0" infoUpdateTime="17e6caf0b78"
             numInputs="0" numOutputs="2" isShell="0" uid="6163676e"/>
-    <STATE>579.hAGaoMGcv.C1AHv.DTfAGfPBJr.Gc3wGgvUag4VclE1XzUmbkIGUjEFcg8EDarVPUAkbkMWYzAUYxMWZyQWYtQ2TzEFcksTY4c0b0IFc4AWYWYWYxMWZu4FUzkGbk8EDOXVZrUVKxUlYkIWYtMVYyQkag0VYRDFbvwFPgxvzM3vCPDQFXYTZrUlSg0VYWIUYmk1atMmWIM2TkwVYiQWYjYTZrU1WPT0KUMWYxM2KzI1azUFan81KD81X00VYtQ2buzTcyk1XPI2ajU2Xzk1at8BQJAxTkwVYiQGHTUmakM2KA0lXoUlaz8BLy.RKfDDarARRf3TYkQlKsA2LgJA0SPQEVbAFYngWRU1Yo8laD8VYywzauAmVRU1Yo8laDEFcg8EDPjzbSUFakMFckQlTkcVZu4lVRU1Yo8laNEVakgvSP.G...........f5skkh+A......+C.....jpmEA..F...TXghB.fA...ndaYo3e....p2VVJ9G..D................................................................HkzB......InkSkcGHRU1Yo8laIHQXlAGaP.fDgU2YtEMHPXkQowVYfDCVU4FcoQGakQF.H.PF.XB.q.PR.DE.YAfW..G.0Afd.rG.8A.g.zH.UB.o.vO.9GvAAXQ.gD.MA7S..EvrAPa.+F.vATb.GG.yA7b.VC.......HP..........HB..................Dv2</STATE>
+    <STATE>976.hAGaoMGcv.C1AHv.DTfAGfPBJrvInjhJtvUag4VclE1XzUmbkIGUjEFcg8EDarVPUAkbkMWYzAUYxMWZyQWYtQ2TzEFcksTY4c0b0IFc4AWYWYWYxMWZu4FUzkGbk8EDOXVZrUVKxUlYkIWYtMVYyQkag0VYRDFbvwFPixfFcHcCN7.DXYTZrUlSg0VYWIUYmk1atM2WPT0KUMWYxM2KzI1azUFan81KD81X00VYtQ2buzTcyk1XPI2ajU2Xzk1at8BQJAxTkwVYiQGHTUmakM2KA0lXoUlaz8BLy.RKfDDarARRf3TYkQlKsA2LgFA0RLAEUXwEXjgWRU1Yo8laD8VYywzauAmVRU1Yo8laDEFcg8EDPjzbSUFakMFckQlTkcVZu4lVRU1Yo8laNEVakgvSP.G...........f5skkh+A......+C.....jpmEA..F...TXghB.fA...ndaYo3e....p2VVJ9G..D................................................................HkzB......InkSkcGHRU1Yo8laR2fCavwWPv1KUMWYxM2KzI1azUFan81KD81X00VYtQ2buzTcyk1XPI2ajU2Xzk1at8BQJAxTkwVYiQGHTUmakM2KA0lXoUlaz8xMAARKfDCMv.RKfrTZtcFYu01WDIWYg0VXe8jbocVZtEFafzTZ34xcgYGnS2fCd7AHX3URyMUYrU1XzUFYFkFak8EDW8RUyUlby8Bch8FckwFZu8BQuMVcsUlazM2KMU2boMFTx8FY0MFco8lauPjRfLUYrU1XzABU04VYy8RPsIVZk4FcujSPfzBH3DCHs.RQsIlbgMVYtzFbyDZHTKwDTTgEifQIH7DDvA..........XN2Ji6+e...txsx39+G..............N2Ji6+e...H.........fJ.........A....L3e........................................++G..............dKw.3+eADPBZ4TY2AhTkcVZu4VBRDlYvwFD.HQX0claSuBKs7vGaXkQowVYfDiUFkFakAxLVYTZrUFHxfUUtQWZzwVYjA.B.jA.l.vJ.jD.QAPV.3E.vAPc.nG.6Ave.PH.MBPk.zN.uC.9AbP.RDPIA.S.wD.oATZ.vFPsBPh.kH.KBri.UJvkB.p.gN.ECTw.fLPHCXx.nLPKCPy.6LfPCjD.......f.A.........vK..................v.RA</STATE>
     <LAYOUT>
       <INPUTS/>
       <OUTPUTS>
