@@ -79,6 +79,8 @@ private:
     
     using MonoChain = juce::dsp::ProcessorChain<CutFilter,Filter,CutFilter>;
     
+    using Coefficients = Filter::CoefficientsPtr;
+
     MonoChain leftChain, rightChain;
     enum ChainPositions{
         LowCut,
@@ -87,13 +89,48 @@ private:
     };
     
     void updatePeakFilter(const ChainSettings chainSettings);
-    using Coefficients = Filter::CoefficientsPtr;
     static void updateCoefficients(Coefficients& old, const Coefficients& replacements);
     
+    template<int Index, typename ChainType, typename CoefficentType>
+    void update(ChainType& chainType, const CoefficentType& coefficientType){
+        updateCoefficients(chainType.template get<Index>().coefficients, coefficientType[Index]);
+        chainType.template setBypassed<Index>(false);
+    }
+    
     template<typename ChainType, typename CoefficentType>
-    void updateCutFilter(ChainType& leftLowCut,
-                         const CoefficentType cutCoefficents,
-                         const ChainSettings chainSettings);
+    void updateCutFilter(ChainType& chainType,
+                         const CoefficentType& cutCoefficents,
+                         const Slope& lowCutSlope
+                         ){
+        
+        chainType.template setBypassed<0>(true);
+        chainType.template setBypassed<1>(true);
+        chainType.template setBypassed<2>(true);
+        chainType.template setBypassed<3>(true);
+        
+        switch (lowCutSlope) {
+            case Slope_48:{
+                update<3>(chainType, cutCoefficents);
+            }
+            case Slope_36:{
+                update<2>(chainType, cutCoefficents);
+
+            }
+            case Slope_24:{
+                update<1>(chainType, cutCoefficents);
+
+            }
+            case Slope_12:{
+                update<0>(chainType, cutCoefficents);
+
+            }
+
+        }
+    }
+    
+    void updateLowCutFilters(const ChainSettings& chainSettings);
+    void updateHighCutFilters(const ChainSettings& chainSettings);
+    void updateFilters();
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleEQAudioProcessor)
 };
